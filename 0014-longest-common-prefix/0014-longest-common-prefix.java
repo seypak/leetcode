@@ -19,7 +19,7 @@ class Solution {
             char f = first.charAt(i);
             char l = last.charAt(i);
             if(f == l) {
-                result += f;
+                result += String.valueOf(f);
             } else {
                 break;
             }

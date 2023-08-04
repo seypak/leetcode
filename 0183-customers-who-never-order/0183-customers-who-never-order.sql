@@ -1,0 +1,4 @@
+# Write your MySQL query statement below
+
+SELECT C.NAME AS Customers FROM CUSTOMERS C
+WHERE ID NOT IN (SELECT CUSTOMERID FROM ORDERS)

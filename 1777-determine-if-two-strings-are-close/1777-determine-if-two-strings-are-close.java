@@ -14,12 +14,13 @@ class Solution {
         }
 
         // 3. word1의 카운트만큼 word2의 카운트가 존재한다면 교체가 가능하므로 true
-        // 4. 문자열 카운트가 중복될때 처리가 추가로 필요할것같은데.. run실행 후 로직추가 
+        // 4. 같은 문자열이 있는지 체크 추가
         for(Character c : map.keySet()){
             Integer value = map.get(c);
             if(!map2.containsValue(value) || !map2.containsKey(c)) {
                 return false;
             } else {
+                // 4. 사용되었던 카운트는 0 처리 추가
                 for(Character c2 : map2.keySet()){
                     Integer value2 = map2.get(c2);
                     if(value2 == value) {

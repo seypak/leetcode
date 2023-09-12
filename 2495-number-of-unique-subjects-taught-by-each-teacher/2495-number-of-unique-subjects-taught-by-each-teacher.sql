@@ -1,0 +1,14 @@
+# Write your MySQL query statement below
+
+SELECT
+  A.TEACHER_ID
+  , COUNT(SUBJECT_ID) AS cnt
+FROM
+(
+  SELECT 
+    TEACHER_ID
+    , SUBJECT_ID
+  FROM TEACHER
+  GROUP BY SUBJECT_ID, TEACHER_ID
+) A
+GROUP BY A.TEACHER_ID
